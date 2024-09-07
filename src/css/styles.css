@@ -114,3 +114,17 @@ footer {
         color: var(--bg-table);
     }
 }
+
+.social-media {
+    margin-top: 20px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: darkred;
+        }
+    }
+}
