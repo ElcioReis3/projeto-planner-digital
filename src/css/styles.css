@@ -1,0 +1,116 @@
+@import url(/src/css/vendor/vendor.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    outline: none;
+    border: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main);
+}
+
+.planner {
+    text-align: center;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+h1 {
+    color: var(--font-color);
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: var(--font-color);
+    background-color: var(--main);
+    text-align: center;
+    font-weight: normal;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.table {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    gap: 15px;
+    padding: 30px;
+    box-shadow: 1px 2px 4px var(--shadow);
+    border-radius: 7px;
+    background-color: var(--bg-table);
+}
+
+.column {
+    padding: 12px 0;
+    border-radius: 3px;
+    background: #ffff;
+    border-radius: 7px;
+}
+
+input {
+    width: 100%;
+    background-color: transparent;
+    padding-left: 5px;
+    color: var(--font-color);
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+}
+
+button {
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-weight: 900;
+    cursor: pointer;
+    color: var(--line);
+    box-shadow: 1px 2px 4px var(--shadow);
+    transition: background-color 2.s ease;
+
+    &:hover {
+        background-color: var(--hover);
+        color: var(--font-color);
+    }
+}
+
+.anotações {
+    background-color: var(--bt-notes);
+    border-radius: 10px;
+
+    input {
+        border-bottom: 1px solid var(--bg-table);
+        color: var(--bg-table);
+    }
+
+    h3 {
+        background: transparent;
+    }
+}
+
+footer {
+    background: #000000;
+    color: var(--bt-notes);
+    height: 100px;
+    text-align: center;
+    padding: 20px;
+    font-weight: 700;
+
+    a {
+        font-size: 10px;
+        color: var(--bg-table);
+    }
+}

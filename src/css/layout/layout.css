@@ -1,0 +1,45 @@
+@media screen and (max-width:800px) {
+    .planner {
+        padding: 15px 0;
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+
+    .table {
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    h1 {
+        font-size: 23px;
+        letter-spacing: normal;
+
+    }
+
+    .table {
+        grid-template-columns: repeat(auto-fit, minmax(70%, 1fr));
+    }
+
+    input {
+        font-size: clamp(12px, 0.9rem, 22px);
+    }
+
+}
+
+
+@media screen and (max-height:800px) and (orientation:landscape) {
+    .planner {
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+
+    .table {
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    }
+
+    input {
+        font-size: clamp(12px, 0.9rem, 22px);
+    }
+}

@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --font-color: #302e2e;
+    --bg-table: #faf6f1;
+    --main: #8edccd;
+    --line: #8f8e8e;
+    --shadow: #4a443c4f;
+    --hover: #b9b9b9;
+    --bt-notes: #41b69f;
+}
+
+/* 8edccd */
