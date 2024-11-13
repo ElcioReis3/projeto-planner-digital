@@ -64,6 +64,8 @@ function saveDados() {
         }
         ip.value = localStorage.getItem(ip.id)
     })
+    let colorBg = localStorage.getItem('color')
+    planner.style.backgroundColor = colorBg;
 }
 
 btnClear.forEach((item) => {
@@ -125,4 +127,9 @@ btnClear.forEach((item) => {
     })
 })
 saveDados();
+
+document.querySelector('#colorBg').addEventListener('input', (event) => {
+    localStorage.setItem('color', `${event.target.value}`)
+    planner.style.backgroundColor = `${event.target.value}`
+})
 
