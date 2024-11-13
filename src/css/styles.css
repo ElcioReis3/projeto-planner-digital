@@ -8,6 +8,7 @@
     font-optical-sizing: auto;
     outline: none;
     border: none;
+    text-decoration: none;
 }
 
 body {
@@ -80,6 +81,7 @@ button {
     color: var(--line);
     box-shadow: 1px 2px 4px var(--shadow);
     transition: background-color 2.s ease;
+    margin-top: 12px;
 
     &:hover {
         background-color: var(--hover);
@@ -110,21 +112,10 @@ footer {
     font-weight: 700;
 
     a {
-        font-size: 10px;
         color: var(--bg-table);
     }
 }
 
 .social-media {
-    margin-top: 20px;
-
-    a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &:hover {
-            color: darkred;
-        }
-    }
+    margin-top: 8px;
 }

@@ -10,14 +10,16 @@ let tableTitles = ["seg", "ter", "qua", "qui", "sex", "sab", "dom", "anotações
 
 for (let title of tableTitles) {
     createCol(title)
-
 }
 
 function createCol(name) {
     let column = document.createElement("div")
     let h3 = document.createElement("h3")
     let line = document.createElement("div")
+    let buttonDelete = document.createElement('button')
 
+    buttonDelete.setAttribute('class', 'clear')
+    buttonDelete.innerText = 'Limpar'
     column.setAttribute("class", `column ${name}`)
     h3.innerHTML = name
     line.setAttribute("class", "line")
@@ -26,15 +28,18 @@ function createCol(name) {
     for (let i = 0; i < 9; i++) {
         let input = document.createElement("input")
         input.type = "text"
-        input.setAttribute("class", "input-planner")
+        input.setAttribute("class", `allInputs ${name}`)
         line.appendChild(input)
     }
     column.appendChild(h3)
     column.appendChild(line)
+    column.appendChild(buttonDelete)
 
     table.appendChild(column)
 }
-let allInputs = document.querySelectorAll(".input-planner")
+let allInputs = document.querySelectorAll(".allInputs")
+const btnClear = document.querySelectorAll('.clear')
+
 
 for (let i = 0; i < 71; i++) {
     allInputs[i].setAttribute("id", `${i}`)
@@ -61,5 +66,63 @@ function saveDados() {
     })
 }
 
+btnClear.forEach((item) => {
+    item.addEventListener('click', (event) => {
+        switch (event.target.parentElement.className) {
+            case 'column seg':
+                document.querySelectorAll('.seg').forEach(ip => {
+                    ip.value = ''
+                    setLocalStorage(ip.id, ip.value)
+                })
+                break;
+            case 'column ter':
+                document.querySelectorAll('.ter').forEach(ip => {
+                    ip.value = ''
+                    setLocalStorage(ip.id, ip.value)
+                })
+                break;
+            case 'column qua':
+                document.querySelectorAll('.qua').forEach(ip => {
+                    ip.value = ''
+                    setLocalStorage(ip.id, ip.value)
+                })
+                break;
+            case 'column qui':
+                document.querySelectorAll('.qui').forEach(ip => {
+                    ip.value = ''
+                    setLocalStorage(ip.id, ip.value)
+                })
+                break;
+            case 'column sex':
+                document.querySelectorAll('.sex').forEach(ip => {
+                    ip.value = ''
+                    setLocalStorage(ip.id, ip.value)
+                })
+                break;
+            case 'column sab':
+                document.querySelectorAll('.sab').forEach(ip => {
+                    ip.value = ''
+                    setLocalStorage(ip.id, ip.value)
+                })
+                break;
+            case 'column dom':
+                document.querySelectorAll('.dom').forEach(ip => {
+                    ip.value = ''
+                    setLocalStorage(ip.id, ip.value)
+                })
+                break;
+            case 'column anotações':
+                document.querySelectorAll('.anotações').forEach(ip => {
+                    ip.value = ''
+                    setLocalStorage(ip.id, ip.value)
+                })
+                break;
+            default:
+                break;
+        }
+
+
+    })
+})
 saveDados();
 
