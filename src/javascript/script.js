@@ -133,3 +133,18 @@ document.querySelector('#colorBg').addEventListener('input', (event) => {
     planner.style.backgroundColor = `${event.target.value}`
 })
 
+
+function showDate() {
+    let data = new Date;
+    let week = data.getDay();
+    let weekSelect = document.querySelectorAll('h3')
+    weekSelect.forEach((item, index) => {
+        if (index < week - 1) {
+            weekSelect[index].style.backgroundColor = '#ECA3A3'
+            weekSelect[index].style.color = '#976868'
+        }
+    })
+
+    weekSelect[week - 1].style.backgroundColor = '#51f151'
+}
+showDate()

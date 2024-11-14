@@ -12,6 +12,7 @@
 @media (max-width: 1090px) {
     .table {
         grid-template-columns: 1fr 1fr;
+        padding: 13px;
     }
 
     h1 {
@@ -27,5 +28,6 @@
 @media (max-width: 800px) {
     .table {
         grid-template-columns: 1fr;
+        padding: 7px;
     }
 }
