@@ -145,6 +145,6 @@ function showDate() {
         }
     })
 
-    weekSelect[week - 1].style.backgroundColor = '#51f151'
+    weekSelect[week - 1].style.backgroundColor = '#a3eca3'
 }
 showDate()
