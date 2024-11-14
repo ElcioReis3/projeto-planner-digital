@@ -32,7 +32,6 @@ body {
 h1 {
     color: var(--font-color);
     font-weight: 600;
-    font-size: 28px;
     letter-spacing: 1px;
 }
 
@@ -41,17 +40,16 @@ h3 {
     color: var(--font-color);
     background-color: var(--main);
     text-align: center;
-    font-weight: normal;
     border-radius: 3px;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .table {
     width: 90%;
-    display: flex;
-    /* grid-template-columns: repeat(auto-fit, minmax(20%, 1fr)); */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
-    flex-wrap: wrap;
     padding: 30px;
     box-shadow: 1px 2px 4px var(--shadow);
     border-radius: 7px;
@@ -59,8 +57,8 @@ h3 {
 }
 
 .column {
-    padding: 12px 0;
-    border-radius: 3px;
+    padding: 15px 0;
+    border-radius: 4px;
     background: #ffff;
     border-radius: 7px;
 }
@@ -71,7 +69,7 @@ input {
     padding-left: 5px;
     color: var(--font-color);
     border-bottom: 1px solid var(--line);
-    font-size: 17px;
+    font-size: 22px;
 }
 
 button,
