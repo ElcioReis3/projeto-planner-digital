@@ -6,7 +6,7 @@ const getLocalStorage = (id) => localStorage.getItem(id) ?? [];
 const setLocalStorage = (id, value) => localStorage.setItem(id, value);
 
 let id = 0;
-let tableTitles = ["seg", "ter", "qua", "qui", "sex", "sab", "dom", "anotações"];
+let tableTitles = ["dom", "seg", "ter", "qua", "qui", "sex", "sab", "anotações"];
 
 for (let title of tableTitles) {
     createCol(title)
@@ -138,13 +138,17 @@ function showDate() {
     let data = new Date;
     let week = data.getDay();
     let weekSelect = document.querySelectorAll('h3')
+
+
     weekSelect.forEach((item, index) => {
-        if (index < week - 1) {
+        if (weekSelect.length) {
             weekSelect[index].style.backgroundColor = '#ECA3A3'
             weekSelect[index].style.color = '#976868'
         }
+        weekSelect[week].style.backgroundColor = '#a3eca3'
+        weekSelect[week].style.color = '#000'
+        weekSelect[7].style.backgroundColor = '#b3b3b3'
+        weekSelect[7].style.color = '#000'
     })
-
-    weekSelect[week - 1].style.backgroundColor = '#a3eca3'
 }
 showDate()
